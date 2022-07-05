@@ -1,0 +1,181 @@
+.header  {
+    width: 100%;
+    background-color: #FADADD;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.20), 
+        rgba(0, 0, 0, 0.20)
+      ), url(../../img/bg-cake.jpg);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.header h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.header p {
+    text-align: center;
+    margin: 5px auto 10px;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+ }
+
+.body {
+    background-color: #FADADD;
+    font-family: Helvetica;
+}
+
+.recipes {
+    margin-top: 0;
+}
+
+
+h3 {
+    text-align: center;
+    margin: auto;  /* relative header, margin collapsing */
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+p {
+   text-align: center;
+   margin: 5px auto 10px;
+   font-size: 18px;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1 1 0;
+    width: 100%;
+    padding-bottom: 5px;
+    
+ }
+
+ .content {
+    position: relative;
+    width: 50vh;
+    height: 40vh;
+    margin: 15px 40px;
+}
+
+.items img {
+ display: block;
+ width: 100%;
+ height: 100%;
+ border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.overlay > * {
+    transform: translateY(50px);
+    transition: transform 0.25s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay:hover > * {
+    transform: translateY(0px);
+}
+ 
+.name {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: Helvetica;
+}
+
+
+
+/* recipe pages */
+.about h3 {
+    text-align: center;
+}
+
+.ingredients h2 {
+ text-align: center;
+}
+
+.prep h2 {
+    text-align: center;
+}
+
+.pg-body {
+    background-color: #FADADD;
+}
+
+.page-img {
+    background-image: url(../../img/donuts.jpg);
+    width: 100%;
+    height: 50vh;
+    background-repeat: repeat-x;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.pie-img {
+    background-image: url(../../img/pie.jpg);
+    width: 100%;
+    height: 50vh;
+    background-repeat: repeat-x;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.cake-img{
+    background-image: url(../../img/choco-cake.jpg);
+    width: 100%;
+    height: 50vh;
+    background-repeat: repeat-x;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+footer {
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .page-img, .pie-img, .cake-img {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
